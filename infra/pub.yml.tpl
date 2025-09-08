@@ -87,5 +87,6 @@ write_files:
 runcmd:
   - systemctl daemon-reload
   - systemctl restart docker
+  - systemctl start node-problem-detector
   - systemctl start hang-bbb-prepare
   - systemctl start hang-bbb
