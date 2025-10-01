@@ -2,14 +2,13 @@
 import Issues from "@/components/issues.astro";
 import Watch from "@/components/watch.tsx";
 import Layout from "@/layouts/global.astro";
+import Hang from "@/components/hang.astro";
 ---
 
 <Layout title={`Watch`} description="Watch a live broadcast.">
 	<Issues />
 
-	<p class="mb-16">
-		Watching a <strong>PUBLIC</strong> broadcast. Pls report any bad stuff.
-	</p>
-
 	<Watch client:only="solid-js" />
+
+	<Hang />
 </Layout>

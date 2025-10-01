@@ -51,13 +51,13 @@ export default function () {
 					<a href="https://github.com/openai/whisper">Whisper</a>.
 				</li>
 				<li>
-					⚡ <strong>Real-time Latency</strong>: Minimal buffer, old media is skipped during congestion.
+					⚡ <strong>Real-Time</strong>: Minimal latency by skipping unimportant media during congestion.
 				</li>
 				<li>
 					🚀 <strong>Massive Scale</strong>: Everything is deduplicated and distributed across a global CDN.
 				</li>
 				<li>
-					💪 <strong>Efficient</strong>: No bandwidth is used until a viewer needs it.
+					💪 <strong>Efficient</strong>: No encoding or bandwidth usage until a viewer needs it.
 				</li>
 				<li>
 					🔧 <strong>Compatible</strong>: TCP fallback via{" "}

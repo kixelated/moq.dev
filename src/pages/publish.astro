@@ -2,6 +2,7 @@
 import Issues from "@/components/issues.astro";
 import Element from "@/components/publish.tsx";
 import Layout from "@/layouts/global.astro";
+import Hang from "@/components/hang.astro";
 ---
 
 <Layout title="Publish" description="Publish a public broadcast.">
@@ -12,4 +13,6 @@ import Layout from "@/layouts/global.astro";
 	</p>
 
 	<Element client:only="solid-js" />
+
+	<Hang />
 </Layout>

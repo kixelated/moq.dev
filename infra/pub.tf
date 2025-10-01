@@ -8,7 +8,7 @@ resource "google_compute_instance" "pub" {
     initialize_params {
       image = local.pub.image
 
-      size = 50 # 50 GB
+      size = 64 # GB
       type = "pd-standard"
     }
   }

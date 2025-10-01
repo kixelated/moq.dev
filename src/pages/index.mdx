@@ -15,20 +15,33 @@ Unless masochism is your thing.
 
 <p class="tagline">Try out the web demo! [Watch](/watch) or [Publish](/publish) a broadcast</p>
 
-\***NOTE**: This website uses a [fork](/blog/transfork) of the IETF draft called [moq-lite](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-lite.html) and a media layer called [hang](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-hang.html).
-The principles behind MoQ are fantastic, but standards are **SLOW**.
-My goal is to build something simple that you can use *now*, even if it's not a standard *yet*.
+<div class="flex items-center gap-8">
+	<a href="https://hang.live" rel="noreferrer" target="_blank">
+		<img src="/hang.svg" class="w-32" alt="hang.live" />
+	</a>
+	<div>
+		Want a better demo?
+		<a href="https://hang.live" rel="noreferrer" target="_blank">hang.live</a> uses the same open-source libraries but adds more functionality on top.
+	</div>
+</div>
 
 
 ### ✨ Features
 
 - 🔓 **Open Source**: Production-ready [Rust and TypeScript libraries](/source).
 - 🌐 **100% Web**: Utilizes [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport), [WebCodecs](https://developer.mozilla.org/en-US/docs/Web/API/WebCodecs_API), [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/WebAudio_API), WebEtc.
-- ⚡ **Real-time**: Minimal latency, prioritizing important media during congestion.
+- ⚡ **Real-time**: Minimal latency by skipping unimportant media during congestion.
 - 🚀 **Massive Scale**: Host your own CDN with [moq-relay](https://github.com/kixelated/moq/tree/main/rs/moq-relay) or use [Cloudflare](/blog/first-cdn).
 - 🎬 **Multi-Platform**: [Web](https://github.com/kixelated/moq/tree/main/js/hang), [FFmpeg](https://github.com/kixelated/moq/tree/main/rs/hang-cli), and [GStreamer](https://github.com/kixelated/hang-gst) clients available.
-- 🔍 **Live Discovery**: Natively supports conferencing and online/offline detection.
+- 🔍 **Discoverable**: Live notifications when broadcasts are published.
+- 💪 **Efficient**: No encoding or bandwidth usage until a viewer needs it.
 - 🔧 **Compatible**: TCP fallback via [WebSocket](https://github.com/kixelated/web-transport/tree/main/web-transport-ws), Safari fallback via [libav.js](https://github.com/Yahweasel/libav.js/).
+
+### *Standards
+This website uses a [fork](/blog/transfork) of the IETF draft called [moq-lite](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-lite.html) and a media layer called [hang](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-hang.html).
+The principles behind MoQ are fantastic, but standards are **SLOW** and involve too much arguing.
+My goal is to build something simple that you can use *now*, even if it's not a standard *yet*.
+
 
 ### Learn More
 Check out the [blog](/blog) for more information and a smattering of jokes.
