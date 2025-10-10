@@ -5,7 +5,7 @@ import "@kixelated/hang/publish/element";
 
 export default function () {
 	const name = uniqueNamesGenerator({ dictionaries: [adjectives, animals], separator: "-" });
-	const url = new URL(import.meta.env.PUBLIC_CLOUDFLARE_URL);
+	const url = new URL("/anon", import.meta.env.PUBLIC_RELAY_URL);
 
 	return (
 		<div>
@@ -65,11 +65,6 @@ export default function () {
 					via <a href="https://github.com/Yahweasel/libav.js/">libav.js.</a>
 				</li>
 			</ul>
-
-			<h3>Hosted on:</h3>
-			<a href="/blog/first-cdn" rel="noreferrer" target="_blank">
-				<img src="/blog/first-cdn/cloudflare.png" alt="Cloudflare" class="w-64" />
-			</a>
 		</div>
 	);
 }

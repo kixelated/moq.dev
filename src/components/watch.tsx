@@ -9,9 +9,9 @@ export default function () {
 
 	let url: URL;
 	if (name === "bbb") {
-		url = new URL(`${import.meta.env.PUBLIC_RELAY_URL}/demo?jwt=${import.meta.env.PUBLIC_RELAY_TOKEN}`);
+		url = new URL(`/demo?jwt=${import.meta.env.PUBLIC_RELAY_TOKEN}`, import.meta.env.PUBLIC_RELAY_URL);
 	} else {
-		url = new URL(import.meta.env.PUBLIC_CLOUDFLARE_URL);
+		url = new URL("/anon", import.meta.env.PUBLIC_RELAY_URL);
 	}
 
 	return (
@@ -63,21 +63,12 @@ export default function () {
 				<li>
 					💪 <strong>Efficient</strong>: No video is downloaded when minimized, or audio when muted.
 				</li>
-				<Show when={name === "bbb"}>
-					<li>
-						🔧 <strong>Compatible</strong>: TCP fallback via{" "}
-						<a href="https://github.com/kixelated/web-transport/tree/main/web-transport-ws">WebSocket</a>, Safari
-						fallback via <a href="https://github.com/Yahweasel/libav.js/">libav.js.</a>
-					</li>
-				</Show>
+				<li>
+					🔧 <strong>Compatible</strong>: TCP fallback via{" "}
+					<a href="https://github.com/kixelated/web-transport/tree/main/web-transport-ws">WebSocket</a>, Safari
+					fallback via <a href="https://github.com/Yahweasel/libav.js/">libav.js.</a>
+				</li>
 			</ul>
-
-			<Show when={name !== "bbb"}>
-				<h3>Hosted on:</h3>
-				<a href="/blog/first-cdn" rel="noreferrer" target="_blank">
-					<img src="/blog/first-cdn/cloudflare.png" alt="Cloudflare" class="w-64" />
-				</a>
-			</Show>
 		</>
 	);
 }
