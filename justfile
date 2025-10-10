@@ -16,12 +16,6 @@ check:
 	# Make sure Typescript compiles
 	pnpm run check
 
-	# Make sure the JS packages are not vulnerable
-	# pnpm exec pnpm audit
-
-	# TODO: Check for unused imports (fix the false positives)
-	# pnpm exec knip --no-exit-code
-
 # Automatically fix some issues.
 fix:
 	# Fix the JS packages
@@ -29,12 +23,6 @@ fix:
 
 	# Format and lint
 	pnpm exec biome check --fix
-
-	# Some additional linting.
-	pnpm exec eslint . --fix
-
-	# Make sure the JS packages are not vulnerable
-	# pnpm exec pnpm audit --fix
 
 # Run any CI tests
 test:

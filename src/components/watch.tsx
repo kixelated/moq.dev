@@ -65,8 +65,8 @@ export default function () {
 				</li>
 				<li>
 					🔧 <strong>Compatible</strong>: TCP fallback via{" "}
-					<a href="https://github.com/kixelated/web-transport/tree/main/web-transport-ws">WebSocket</a>, Safari
-					fallback via <a href="https://github.com/Yahweasel/libav.js/">libav.js.</a>
+					<a href="https://github.com/kixelated/web-transport/tree/main/web-transport-ws">WebSocket</a>, Safari fallback
+					via <a href="https://github.com/Yahweasel/libav.js/">libav.js.</a>
 				</li>
 			</ul>
 		</>
