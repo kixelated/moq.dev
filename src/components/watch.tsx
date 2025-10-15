@@ -23,7 +23,7 @@ export default function () {
 					{name}
 				</a>
 			</div>
-			<hang-watch prop:url={url} prop:name={name} prop:muted={true} prop:controls={true} prop:captions={true}>
+			<hang-watch prop:url={url} prop:name={name} prop:muted={true} prop:controls={true} prop:captions={true} prop:reload={true}>
 				<canvas style={{ "max-width": "100%", height: "auto", margin: "0 auto", "border-radius": "1rem" }} />
 			</hang-watch>
 
