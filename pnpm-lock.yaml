@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@kixelated/hang':
-        specifier: ^0.4.2
-        version: 0.4.2(@types/react@19.1.12)(solid-js@1.9.7)
+        specifier: ^0.6.1
+        version: 0.6.1(@types/react@19.1.12)(solid-js@1.9.7)
       astro:
         specifier: ^5.8.2
         version: 5.8.2(@types/node@22.15.29)(jiti@1.21.7)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.8.0)
@@ -859,19 +859,19 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@kixelated/hang@0.4.2':
-    resolution: {integrity: sha512-xSBsLGVAnxcx1+ZDyuJvG1Vj5HUwIRBDe8lWeukzPkonPGBt3yZ8GAAolmdxUE9v2G0mdf/a/cSdros404m5yg==}
+  '@kixelated/hang@0.6.1':
+    resolution: {integrity: sha512-3XnqmnUUekHqaWsriWEitVyEYGflzmjF0jvbrMqkFgYZkatXI6AI0dKso5VWgfXKOMSUA2RvmzvLtDRxEOCTeQ==}
 
   '@kixelated/libavjs-webcodecs-polyfill@0.5.5':
     resolution: {integrity: sha512-Q1zgnTMMQ2F7IE9ylx3C1XzVbg5vYN18jiDINO5U3kNPBOHdYuUlJsMhtBoqr1M6ocLtoiqdHmLs7tHFgrw5KA==}
 
-  '@kixelated/moq@0.8.2':
-    resolution: {integrity: sha512-uDwWePY74Fv5ToiycQDKzXb6osCifyT8k66sY8juAtvrfhEKNKGKj0IpUfRQ4sx3QTy0h7HLsxO5t+m1FfuH3A==}
+  '@kixelated/moq@0.9.3':
+    resolution: {integrity: sha512-Lx1RBSMOZ/vOhEgGzjQrqcRhCG49b56FBRQdJabswHEM1HqFP/BO50QBOmqO4YznoJ3Wdgy3hHnRctDNWaQFdA==}
     peerDependencies:
-      zod: ^4.0.0
+      zod: ^4.1.0
 
-  '@kixelated/signals@0.6.1':
-    resolution: {integrity: sha512-VVe3oaKF3Ec8ezEYVokdsxC87xG2MI//9O4FdX+ZWYAKcUaJmDNmKIRr0FoLdXVUDYhEOM7KOFAqDcc98Dqpqw==}
+  '@kixelated/signals@0.8.1':
+    resolution: {integrity: sha512-AlB3WKoPJGf4jDrBhY7JCLJAcr8X8qlMPdVhPkOjhsitQIst/NeKK9i7lmmrLsSniOx2tdeW5tkNaM2+3OFODA==}
     peerDependencies:
       '@types/react': ^19.1.8
       react: ^19.0.0
@@ -3621,12 +3621,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@kixelated/hang@0.4.2(@types/react@19.1.12)(solid-js@1.9.7)':
+  '@kixelated/hang@0.6.1(@types/react@19.1.12)(solid-js@1.9.7)':
     dependencies:
       '@huggingface/transformers': 3.7.2
       '@kixelated/libavjs-webcodecs-polyfill': 0.5.5
-      '@kixelated/moq': 0.8.2(zod@4.1.5)
-      '@kixelated/signals': 0.6.1(@types/react@19.1.12)(solid-js@1.9.7)
+      '@kixelated/moq': 0.9.3(@types/react@19.1.12)(solid-js@1.9.7)(zod@4.1.5)
+      '@kixelated/signals': 0.8.1(@types/react@19.1.12)(solid-js@1.9.7)
       '@libav.js/variant-opus-af': 6.8.8
       async-mutex: 0.5.0
       comlink: 4.4.2
@@ -3641,13 +3641,18 @@ snapshots:
       '@libav.js/types': 6.8.8
       '@ungap/global-this': 0.4.4
 
-  '@kixelated/moq@0.8.2(zod@4.1.5)':
+  '@kixelated/moq@0.9.3(@types/react@19.1.12)(solid-js@1.9.7)(zod@4.1.5)':
     dependencies:
+      '@kixelated/signals': 0.8.1(@types/react@19.1.12)(solid-js@1.9.7)
       '@kixelated/web-transport-ws': 0.1.2
       async-mutex: 0.5.0
       zod: 4.1.5
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+      - solid-js
 
-  '@kixelated/signals@0.6.1(@types/react@19.1.12)(solid-js@1.9.7)':
+  '@kixelated/signals@0.8.1(@types/react@19.1.12)(solid-js@1.9.7)':
     dependencies:
       '@types/react': 19.1.12
       dequal: 2.0.3
