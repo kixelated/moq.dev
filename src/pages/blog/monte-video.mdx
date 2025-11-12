@@ -1,0 +1,88 @@
+---
+layout: "@/layouts/global.astro"
+title: "Monte<video>: A Real Place"
+author: kixelated
+description: "Maybe join us in Uruguay this year? We'll be working on MoQ and stuff."
+cover: "/blog/monte-video/uruguay.png"
+date: 2025-11-11
+---
+
+# Monte\<video\>: A Real Place
+Who knew?
+
+No like seriously, they named a place after video encoding.
+And it's the capital of Uruguay???
+
+## Summer Camp
+🎉 [kixelated/moq](https://github.com/kixelated/moq) was selected for the 2026 [Montevideo Tech Summer Camp](https://montevideotech.dev/summercamp2026/). 🎉
+
+This means that Mike (Cloudflare) and I (painfully unemployed) will be "mentoring" open source contributors over the next few months.
+It starts as an weekly online meeting before eventually culminating in an (optional) event in Montevideo at the end of January.
+AND it's summer there while it's cold (mostly) everywhere else.
+
+<figure>
+	![Uruguay](/blog/monte-video/uruguay.png)
+	<figcaption>AND they have an awesome thing on their flag.</figcaption>
+</figure>
+
+## Should you participate?
+So I actually went to Uruguay last year when they picked [Mike's fork](https://github.com/video-dev/moq-js) of my JS library.
+
+Yes it was super awkward contributing to a fork of my own project.
+Yes I'm just an awkward person in general.
+But it was still fun, I recommend it, and I'll be heading there again this year.
+
+If you want an excuse to work on MoQ or a business justification to visit Uruguay, this is your chance.
+The Qualabs folks legitimately turn it into a full-blown vacation with organized events, tours, meals, etc.
+You don't actually spend much time doing work, you mostly hang out with other video nerds instead.
+
+
+## What we working on?
+But before the event, we'll be working on MoQ.
+I'll be filling a boatload of issues in the next few days in a vain attempt at project planning.
+If you have any ideas or feature requests, file an issue or ping me on Discord.
+
+Here's some of my big ideas if anything sounds interesting:
+
+### Conferencing
+Steal the rendering engine from [hang.live](/blog/first-app) and make a general purpose conferencing app.
+Without the copious amount of cringe and meme videos.
+Throw in some lame corporate branding and you've got a legitimate product..?
+
+### MoQ+HLS+DASH
+One of the biggest barriers to adoption is getting MoQ to work with an existing HLS/DASH stack.
+It's not viable to instantaniously migrate all clients to MoQ, despite the IETF pretending like a FETCH verb is all you need.
+I want to scope out what it takes to simultaneously support MoQ, HLS, and DASH with a single implementation
+
+### OBS and Friends
+Another barrier to adoption is getting the media in the first place.
+I've got a crude gstreamer plugin already but we can make it better.
+Being able to ingest media from OBS would be a HUGE milestone.
+
+### POLISH
+We can also just polish the MoQ player and make it (more) ready for production.
+Stuff like better bundling, better documentation, better examples, etc.
+
+
+## What next?
+The kick-off meeting is [this Friday](https://meetu.ps/e/PF7F0/GFW4z/i) and it'll be a recurring thing until the end of January.
+I'm going to be in Australia for the next few months so 3am is going to be rough, but sacrifice is part of my "job description".
+
+- If you're interested in the in-person event, [email to get on the guest list](mailto:summercamp@montevideotech.dev). You have to pay for flights+hotel, but it's worth it.
+- If you're not intested in the in-person event but want to contribute, join the meetings to coordinate?
+
+Or just hang out on [Discord](https://discord.gg/FCYF3p99mr).
+Direct social interaction is overrated.
+I'll make a `#montevideo` channel or something.
+
+Written by [@kixelated](https://github.com/kixelated).
+![@kixelated](/blog/avatar.png)
+
+
+## One Last Thing
+I want to thank JP, Nico, and the rest of [Qualabs](https://qualabs.com/) for being great hosts.
+
+It's fantastic that they sponsor their employees to contribute to open source projects for a few months.
+It's even more fantastic that they sponsor parties and events for video nerds.
+
+I had a blast last year and hopefully I'll see you there this year.
