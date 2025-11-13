@@ -10,8 +10,8 @@ layout: "@/layouts/global.astro"
 a super-charged TCP/UDP replacement that powers [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3).
 It's being developed by the [IETF](https://www.ietf.org/)\* and your _favorite_ big tech companies such as Google, Meta, Cisco, Akamai, Cloudflare, etc.
 
-That's right, *soon* you will never have to deal with WebRTC again.
-Unless masochism is your thing.
+That's right, you no longer need to hack WebRTC!
+There's a new way to achieve **real-time latency** in the browser, including contribution and mass distribution via generic CDNs.
 
 <p class="tagline">Try out the web demo! [Watch](/watch) or [Publish](/publish) a broadcast</p>
 
@@ -21,7 +21,8 @@ Unless masochism is your thing.
 	</a>
 	<div>
 		Want a better demo?
-		<a href="https://hang.live" rel="noreferrer" target="_blank">hang.live</a> uses the same open-source libraries but adds more functionality on top.
+		<a href="https://hang.live" rel="noreferrer" target="_blank">hang.live</a> uses the same open-source libraries.
+		But with more features and cringe layered on top.
 	</div>
 </div>
 
@@ -30,12 +31,13 @@ Unless masochism is your thing.
 
 - 🔓 **Open Source**: Production-ready [Rust and TypeScript libraries](/source).
 - 🌐 **100% Web**: Utilizes [WebTransport](https://developer.mozilla.org/en-US/docs/Web/API/WebTransport), [WebCodecs](https://developer.mozilla.org/en-US/docs/Web/API/WebCodecs_API), [WebAudio](https://developer.mozilla.org/en-US/docs/Web/API/WebAudio_API), WebEtc.
-- ⚡ **Real-time**: Minimal latency by skipping unimportant media during congestion.
+- ⚡ **Real-time**: Minimal latency by skipping less important media during congestion.
 - 🚀 **Massive Scale**: Host your own CDN with [moq-relay](https://github.com/kixelated/moq/tree/main/rs/moq-relay) or use [Cloudflare](/blog/first-cdn).
-- 🎬 **Multi-Platform**: [Web](https://github.com/kixelated/moq/tree/main/js/hang), [FFmpeg](https://github.com/kixelated/moq/tree/main/rs/hang-cli), and [GStreamer](https://github.com/kixelated/hang-gst) clients available.
-- 🔍 **Discoverable**: Live notifications when broadcasts are published.
+- 🎬 **Multi-Platform**: [Web](https://github.com/kixelated/moq/tree/main/js/hang), [FFmpeg](https://github.com/kixelated/moq/tree/main/rs/hang-cli), [GStreamer](https://github.com/kixelated/hang-gst), and [native](/source) clients available.
+- 🔍 **Discoverable**: Live notifications when broadcasts are published or finish.
 - 💪 **Efficient**: No encoding or bandwidth usage until a viewer needs it.
-- 🔧 **Compatible**: TCP fallback via [WebSocket](https://github.com/kixelated/web-transport/tree/main/web-transport-ws), Safari fallback via [libav.js](https://github.com/Yahweasel/libav.js/).
+- 🌍 **Compatible**: TCP fallback via [WebSocket](https://github.com/kixelated/web-transport/tree/main/web-transport-ws), Safari fallback via [libav.js](https://github.com/Yahweasel/libav.js/).
+- 🔧 **Customizable**: Hardware accelerated encoding, the rest is in your control.
 
 ### *Standards
 This website uses a [fork](/blog/transfork) of the IETF draft called [moq-lite](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-lite.html) and a media layer called [hang](https://kixelated.github.io/moq-drafts/draft-lcurley-moq-hang.html).
