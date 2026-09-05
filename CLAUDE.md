@@ -41,8 +41,14 @@ just fix           # Auto-fix code formatting/lint issues
 - **Styling**: Tailwind CSS
 - **Build**: Vite
 - **Code Quality**: Biome for linting/formatting
-- **Package Manager**: bun v1.3.4
+- **Package Manager**: bun v1.3.13
 - **Task Runner**: just
+- **Toolchain**: pinned in `flake.nix`; `nix develop` (or direnv, via `.envrc`) provides bun, node, and just
+
+The bun version lives in three places that must agree: `flake.nix` (via
+nixpkgs), `packageManager` in `package.json`, and `bun-version` in
+`.github/workflows/pr.yml`. When the monthly `update-flake.yml` PR moves
+nixpkgs, move the other two to match.
 
 ### Key Components
 

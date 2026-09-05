@@ -24,7 +24,17 @@ Join the [Discord](https://discord.moq.dev) for updates and discussion.
 
 ## Setup
 
-Install the dependencies with `bun`:
+The toolchain (`bun`, `node`, `just`) is pinned in `flake.nix`:
+
+```bash
+nix develop -c just dev
+```
+
+With [direnv](https://direnv.net/) installed, `direnv allow` loads that shell
+automatically on every `cd` into the repo.
+
+Don't have Nix? Install `bun` and `just` yourself, matching the `bun` version in
+`packageManager`. Either way, the dependencies come from `bun`:
 
 ```bash
 bun i
