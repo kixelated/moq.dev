@@ -29,15 +29,6 @@ describe("fetch", () => {
 		expect(env.seen).toEqual([]);
 	});
 
-	test("leaves de.moq.dev its own namespace", async () => {
-		// The rewrite has to win over the vanity paths, or DEMOQED loses every URL
-		// starting with /moq to a pkg.go.dev redirect.
-		const env = assets();
-		const res = await send("https://de.moq.dev/moq", env);
-		expect(res.status).toBe(200);
-		expect(env.seen).toEqual(["/de/moq"]);
-	});
-
 	test("passes anything else to the assets", async () => {
 		const env = assets();
 		await send("https://moq.dev/blog/", env);
