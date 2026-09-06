@@ -3,34 +3,23 @@ import "./global.css";
 // Imported after global.css so the theme's .hljs-* color rules land later in
 // the cascade and beat the prose plugin's .markdown :where(pre code) { color: inherit }.
 import "highlight.js/styles/atom-one-dark.css";
-import Subscribe from "@/components/subscribe.astro";
 
 // NOTE: This is magically used as the type for Astro.props
 interface Props {
 	title: string;
 	description: string;
 
-	// Show the signup form. Blog posts get it automatically; other pages opt in,
-	// since it has no business interrupting the demo and player pages.
-	subscribe?: boolean;
-
 	frontmatter?: {
 		title: string;
 		date: string;
 		description: string;
 		cover?: string;
-		subscribe?: boolean;
 	};
 }
 
 let { title, frontmatter, description } = Astro.props;
-const { subscribe } = Astro.props;
 if (frontmatter?.title) title = frontmatter.title;
 if (frontmatter?.description) description = frontmatter.description;
-
-// `date` is what makes a page a blog post. An explicit flag, from either a prop
-// (.astro pages) or frontmatter (.mdx pages), wins over that default.
-const showSubscribe = subscribe ?? frontmatter?.subscribe ?? Boolean(frontmatter?.date);
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://moq.dev";
 const pageUrl = new URL(Astro.url.pathname, siteUrl).toString();
@@ -62,9 +51,12 @@ const proUrl = import.meta.env.MODE === "staging" ? "https://moq.wtf" : "https:/
 		<meta property="og:description" content={fullDescription} />
 		<meta property="og:url" content={pageUrl} />
 		<meta property="og:site_name" content="Media over QUIC" />
+		<!-- No og:image:width/height: covers live in public/ at whatever size they
+		were drawn, so any hardcoded pair is a lie for most pages. Scrapers measure
+		the image themselves when the dimensions are absent; when they're present and
+		wrong they're believed, and a card claiming to be smaller than Twitter's
+		300x157 minimum gets downgraded to a thumbnail. -->
 		<meta property="og:image" content={ogImage} />
-		<meta property="og:image:width" content="163" />
-		<meta property="og:image:height" content="150" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
@@ -131,7 +123,6 @@ const proUrl = import.meta.env.MODE === "staging" ? "https://moq.wtf" : "https:/
 					)
 				}
 				<slot />
-				{showSubscribe && <Subscribe />}
 			</article>
 		</div>
 	</body>
