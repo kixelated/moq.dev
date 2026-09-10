@@ -8,7 +8,7 @@ export default defineConfig({
 	// PUBLIC_ prefix rather than Vite's default VITE_.
 	envDir: "../..",
 	envPrefix: "PUBLIC_",
-	plugins: [routing({ invent: false, project: "demo" })],
+	plugins: [routing()],
 	build: {
 		target: "esnext",
 		outDir: "dist",

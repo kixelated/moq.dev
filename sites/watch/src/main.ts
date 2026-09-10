@@ -8,18 +8,21 @@ import "@moq/watch/element";
 import "@moq/watch/ui";
 
 import * as Broadcast from "../../lib/broadcast";
+import * as Try from "../../lib/try";
 
 const DEFAULT_RELAY = import.meta.env.PUBLIC_RELAY_URL ?? "https://cdn.moq.pro";
 
 const broadcast = Broadcast.parse(location.pathname);
 if (broadcast) {
-	mount(broadcast);
+	void mount(broadcast).catch((error) => {
+		document.body.textContent = error.message;
+	});
 } else {
 	usage();
 }
 
-function mount(broadcast: Broadcast.Broadcast) {
-	const params = new URLSearchParams(location.search);
+async function mount(broadcast: Broadcast.Broadcast) {
+	const params = await Try.watch(import.meta.env.PUBLIC_API_URL, broadcast, new URLSearchParams(location.search));
 	const relay = Broadcast.relay(broadcast, params, DEFAULT_RELAY);
 	if (!relay) {
 		document.body.textContent = "Invalid relay configuration.";
