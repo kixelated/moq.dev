@@ -47,7 +47,7 @@ just fix           # Auto-fix code formatting/lint issues
 
 The Bun version in nixpkgs must match `packageManager` in `package.json`
 and the base image in `Dockerfile`. CI reads its version from `package.json`
-and evaluates the flake assertions to catch drift. When a monthly Dependabot
+and evaluates the flake assertions to catch drift. When a weekly Dependabot
 Nix update changes Bun, update the other two pins in the same PR.
 
 ### Key Components
