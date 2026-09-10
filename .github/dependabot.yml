@@ -9,8 +9,7 @@
 # bypass the cooldown. It only gates Dependabot-driven updates, not a manual
 # `bun update`.
 #
-# Nix has no Dependabot ecosystem, so flake.lock is bumped by the monthly
-# update-flake.yml workflow instead.
+# Nix flake inputs are updated monthly by Dependabot.
 
 version: 2
 updates:
@@ -33,5 +32,14 @@ updates:
       default-days: 7
     groups:
       bun:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "nix"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      nix:
         patterns:
           - "*"

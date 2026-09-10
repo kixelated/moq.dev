@@ -45,10 +45,10 @@ just fix           # Auto-fix code formatting/lint issues
 - **Task Runner**: just
 - **Toolchain**: pinned in `flake.nix`; `nix develop` (or direnv, via `.envrc`) provides bun, node, and just
 
-The bun version lives in three places that must agree: `flake.nix` (via
-nixpkgs), `packageManager` in `package.json`, and `bun-version` in
-`.github/workflows/pr.yml`. When the monthly `update-flake.yml` PR moves
-nixpkgs, move the other two to match.
+The Bun version in nixpkgs must match `packageManager` in `package.json`
+and the base image in `Dockerfile`. CI reads its version from `package.json`
+and evaluates the flake assertions to catch drift. When a monthly Dependabot
+Nix update changes Bun, update the other two pins in the same PR.
 
 ### Key Components
 
