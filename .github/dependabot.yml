@@ -9,7 +9,7 @@
 # bypass the cooldown. It only gates Dependabot-driven updates, not a manual
 # `bun update`.
 #
-# Nix flake inputs are updated monthly by Dependabot.
+# Nix flake inputs are updated weekly by Dependabot.
 
 version: 2
 updates:
@@ -38,7 +38,7 @@ updates:
   - package-ecosystem: "nix"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     groups:
       nix:
         patterns:
