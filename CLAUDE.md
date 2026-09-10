@@ -41,8 +41,14 @@ just fix           # Auto-fix code formatting/lint issues
 - **Styling**: Tailwind CSS
 - **Build**: Vite
 - **Code Quality**: Biome for linting/formatting
-- **Package Manager**: bun v1.3.4
+- **Package Manager**: bun v1.3.13
 - **Task Runner**: just
+- **Toolchain**: pinned in `flake.nix`; `nix develop` (or direnv, via `.envrc`) provides bun, node, and just
+
+The Bun version in nixpkgs must match `packageManager` in `package.json`
+and the base image in `Dockerfile`. CI reads its version from `package.json`
+and evaluates the flake assertions to catch drift. When a monthly Dependabot
+Nix update changes Bun, update the other two pins in the same PR.
 
 ### Key Components
 

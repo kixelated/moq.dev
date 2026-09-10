@@ -30,7 +30,21 @@ Join the [Discord](https://discord.moq.dev) for updates and discussion.
 
 ## Setup
 
-Install the dependencies with `bun`:
+The toolchain (`bun`, `node`, `just`) is pinned in `flake.nix`:
+
+```bash
+nix develop -c just dev
+```
+
+The Nix shell supports Linux (x86-64 and ARM64) and Apple Silicon macOS.
+Intel Macs should use the manual setup below; the pinned nixpkgs no longer
+supports Intel macOS.
+
+With [direnv](https://direnv.net/) installed, `direnv allow` loads that shell
+automatically on every `cd` into the repo.
+
+Don't have Nix? Install `bun`, Node.js 24, and `just` yourself, matching the `bun`
+version in `packageManager`. Either way, the dependencies come from `bun`:
 
 ```bash
 bun i

@@ -10,6 +10,11 @@ dist/
 .astro/
 tsconfig.tsbuildinfo
 
+# Nix / direnv
+.direnv/
+result
+result-*
+
 # Mac shit
 .DS_Store
 
